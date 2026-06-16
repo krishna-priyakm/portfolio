@@ -5,268 +5,473 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishnapriya M Kumar K P | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0f172a;
-    color:#fff;
-    line-height:1.6;
+background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+color:#fff;
+overflow-x:hidden;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-header{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
+nav{
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+background:rgba(15,23,42,0.85);
+backdrop-filter:blur(15px);
+padding:20px 0;
+}
+
+nav .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:1.2rem;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
 }
 
 .hero{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding-top:80px;
 }
 
-.hero h1{
-    font-size:3.5rem;
-    color:#38bdf8;
+.hero-content h1{
+font-size:4rem;
+font-weight:800;
+margin-bottom:15px;
 }
 
-.hero h2{
-    font-weight:300;
+.hero-content span{
+color:#38bdf8;
+}
+
+.hero-content h2{
+font-weight:400;
+margin-bottom:20px;
+color:#cbd5e1;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+line-height:1.8;
+color:#94a3b8;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    background:#38bdf8;
-    color:#000;
-    padding:12px 24px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:600;
-    margin-top:10px;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.primary{
+background:#38bdf8;
+color:#000;
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary{
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
+
+.secondary:hover{
+background:#38bdf8;
+color:black;
 }
 
 section{
-    padding:80px 0;
+padding:90px 0;
 }
 
 .section-title{
-    font-size:2rem;
-    color:#38bdf8;
-    margin-bottom:30px;
+text-align:center;
+font-size:2.3rem;
+margin-bottom:50px;
+color:#38bdf8;
 }
 
-.about,
-.skills,
-.projects,
-.education,
-.contact{
-    background:#111827;
-    margin-bottom:20px;
-    border-radius:12px;
-    padding:40px;
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:20px;
+padding:35px;
+}
+
+.about p{
+font-size:1.05rem;
+line-height:1.9;
+color:#cbd5e1;
 }
 
 .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 }
 
-.skill-card{
-    background:#1f2937;
-    padding:20px;
-    border-radius:10px;
+.skill{
+padding:12px 20px;
+background:#1e293b;
+border-radius:50px;
+border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
 }
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+.skill:hover{
+background:#38bdf8;
+color:black;
+transform:translateY(-5px);
 }
 
-.project-card{
-    background:#1f2937;
-    padding:25px;
-    border-radius:10px;
-    transition:0.3s;
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.project-card:hover{
-    transform:translateY(-5px);
+.project{
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
+}
+
+.project h3{
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+.project p{
+color:#cbd5e1;
+line-height:1.7;
+}
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.timeline-item{
+padding:25px;
+background:rgba(255,255,255,0.05);
+border-left:4px solid #38bdf8;
+border-radius:12px;
+}
+
+.timeline-item h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:12px 0;
+font-size:1.05rem;
 }
 
 .contact a{
-    color:#38bdf8;
-    text-decoration:none;
+color:#38bdf8;
+text-decoration:none;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    color:#aaa;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 
 @media(max-width:768px){
-.hero h1{
+
+.hero-content h1{
 font-size:2.5rem;
 }
+
+nav ul{
+display:none;
 }
+
+.section-title{
+font-size:2rem;
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="container hero">
-
-<h1>Krishnapriya M Kumar K P</h1>
-
-<h2>M.Tech Computer Science Student | AI & Web Developer</h2>
-
-<p>
-Passionate Computer Science postgraduate specializing in
-Artificial Intelligence, Deep Learning, Web Development,
-and Software Engineering. Dedicated to creating innovative
-technology solutions for real-world challenges.
-</p>
-
-<a href="#" class="btn">Download Resume</a>
-
-</div>
-</header>
-
+<nav>
 <div class="container">
 
-<section class="about">
+<div class="logo">KRISHNAPRIYA</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Hi, I'm <span>Krishnapriya</span></h1>
+
+<h2>M.Tech Computer Science Student | AI & Deep Learning Enthusiast</h2>
+
+<p>
+Passionate Computer Science postgraduate with expertise in
+software development, web technologies, machine learning,
+deep learning and intelligent systems. Dedicated to creating
+innovative solutions that solve real-world problems.
+</p>
+
+<div class="buttons">
+
+<a href="resume.pdf" class="btn primary" download>
+Download Resume
+</a>
+
+<a href="https://github.com/krishna-priyakm"
+target="_blank"
+class="btn secondary">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+<div class="container">
+
 <h2 class="section-title">About Me</h2>
+
+<div class="glass about">
 
 <p>
 I am currently pursuing M.Tech in Computer Science and Engineering
-at College of Engineering Trivandrum (CET), Kerala. I have strong
-foundations in software development, programming, machine learning,
-deep learning, and web technologies. I enjoy building intelligent
-systems and user-focused applications that solve practical problems.
+at the College of Engineering Trivandrum (CET), Kerala, with a CGPA
+of 8.11. My interests include Artificial Intelligence, Deep Learning,
+Explainable AI, Software Engineering, and Full-Stack Web Development.
+
+I enjoy building intelligent systems, developing user-focused
+applications, and continuously exploring new technologies that
+create meaningful impact.
 </p>
+
+</div>
+
+</div>
 </section>
 
-<section class="skills">
+<section id="skills">
+
+<div class="container">
+
 <h2 class="section-title">Skills</h2>
 
 <div class="skills-grid">
 
-<div class="skill-card">
-<h3>Programming</h3>
-<p>C, C++, Python, Java</p>
-</div>
+<div class="skill">Python</div>
+<div class="skill">C Programming</div>
+<div class="skill">C++</div>
+<div class="skill">Java</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">React</div>
+<div class="skill">Node.js</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Deep Learning</div>
+<div class="skill">Explainable AI</div>
+<div class="skill">Frontend Development</div>
+<div class="skill">Backend Development</div>
 
-<div class="skill-card">
-<h3>Web Development</h3>
-<p>HTML, CSS, React, Node.js</p>
-</div>
-
-<div class="skill-card">
-<h3>Artificial Intelligence</h3>
-<p>Machine Learning, Deep Learning, XAI</p>
-</div>
-
-<div class="skill-card">
-<h3>Soft Skills</h3>
-<p>Problem Solving, Teamwork, Analytical Thinking</p>
 </div>
 
 </div>
+
 </section>
 
-<section class="projects">
+<section id="projects">
+
+<div class="container">
+
 <h2 class="section-title">Projects</h2>
 
-<div class="project-grid">
+<div class="projects-grid">
 
-<div class="project-card">
-<h3>Sign Language Sentence Formation System</h3>
+<div class="project">
+<h3>🧠 XAI-Enabled Postpartum Depression Predictor</h3>
 <p>
-NLP-based assistive communication system that converts
-sign selections into meaningful sentences and voice output.
+Developed a deep learning-based web application that predicts
+postpartum depression risk and explains model decisions using
+SHAP and LIME visualizations.
 </p>
 </div>
 
-<div class="project-card">
-<h3>Service-Based Mobile Application</h3>
+<div class="project">
+<h3>🤟 Sign Language Sentence Formation System</h3>
 <p>
-Mobile platform allowing users to browse and book
-professional and household services.
+Built an NLP-powered communication system that forms meaningful
+sentences from sign selections and converts them into voice output.
 </p>
 </div>
 
-<div class="project-card">
-<h3>Research Paper Repository Website</h3>
+<div class="project">
+<h3>📚 Research Paper Repository Website</h3>
 <p>
-Web application for storing, organizing, and searching
-academic research papers.
+Designed and developed a web platform for storing, organizing,
+uploading and searching academic research papers efficiently.
 </p>
 </div>
 
-<div class="project-card">
-<h3>XAI-Based Postpartum Depression Predictor</h3>
+<div class="project">
+<h3>📱 Service-Based Mobile Application</h3>
 <p>
-AI-powered web application using deep learning with
-SHAP and LIME explanations for prediction transparency.
+Developed a mobile application that allows users to browse,
+book and manage household and professional services.
 </p>
 </div>
 
 </div>
-</section>
 
-<section class="education">
-<h2 class="section-title">Education</h2>
-
-<h3>M.Tech Computer Science and Engineering</h3>
-<p>College of Engineering Trivandrum (2024-2026)</p>
-<p>CGPA: 8.11</p>
-
-<br>
-
-<h3>B.Tech Computer Science and Engineering</h3>
-<p>Government Engineering College Wayanad (2019-2023)</p>
-<p>CGPA: 6.78</p>
+</div>
 
 </section>
 
-<section class="contact">
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>TechSail Engineering & Compliance Pvt. Ltd. | 2025</h3>
+
+<p>
+Completed an internship focused on developing a service-based
+mobile application. Worked on feature development, application
+design and real-world software solutions while strengthening
+problem-solving and development skills.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
 <h2 class="section-title">Contact</h2>
 
-<p>Email: <a href="mailto:krishnapriyamkkp@gmail.com">krishnapriyamkkp@gmail.com</a></p>
+<div class="glass contact">
 
-<p>Phone: 7306453869</p>
+<p>📧 krishnapriyamkkp@gmail.com</p>
 
-<p>GitHub:
+<p>📱 7306453869</p>
+
+<p>
+💻
 <a href="https://github.com/krishna-priyakm" target="_blank">
-github.com/krishna-priyakm
+GitHub Profile
 </a>
 </p>
 
-<p>Location: Kannur, Kerala</p>
-
-</section>
+<p>📍 Kerala, India</p>
 
 </div>
 
+</div>
+
+</section>
+
 <footer>
-© 2025 Krishnapriya M Kumar K P | Portfolio Website
+© 2025 Krishnapriya M Kumar K P | Portfolio
 </footer>
 
 </body>
